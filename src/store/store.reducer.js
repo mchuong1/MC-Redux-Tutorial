@@ -19,7 +19,7 @@ function visibilityFilter(state = SHOW_ALL, action) {
 
 function todos(state = [], action) {
   switch (action.type) {
-    case ADD_TODO:
+    case 'ADD_TODO':
       return [
         ...state,
         {
@@ -27,7 +27,7 @@ function todos(state = [], action) {
           completed: false
         }
       ];
-    case TOGGLE_TODO:
+    case 'TOGGLE_TODO':
       return state.map((todo, index) => {
         if (index === action.index) {
           return Object.assign({}, todo, {

@@ -20,7 +20,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    const store = createStore(todoApp);
+    const store = createStore(todoApp, ['Testing Initial State']);
 
     //log initial state
     console.log(store.getState());
